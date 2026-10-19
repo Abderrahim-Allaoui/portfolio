@@ -10,7 +10,7 @@
 
 param(
     [Parameter(Mandatory = $false)]
-    [string]$GithubUser = "allaouiabder",
+    [string]$GithubUser = "Abderrahim-Allaoui",
 
     [Parameter(Mandatory = $false)]
     [string]$RepoName = "portfolio",
