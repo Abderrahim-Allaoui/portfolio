@@ -1,0 +1,11 @@
+# --- Core: needed for every script in this project (offline demo works with just these) ---
+beautifulsoup4>=4.12
+pandas>=2.0
+openpyxl>=3.1
+
+# --- Browser: needed only for the browser-based runs (variant A, and variant B with --url) ---
+# The offline demo (variant B with --html sample_page.html) does NOT need this.
+playwright>=1.40
+
+# Install the browser engine once after `pip install -r requirements.txt`:
+#     python -m playwright install chromium

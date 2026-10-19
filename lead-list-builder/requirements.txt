@@ -1,0 +1,4 @@
+pandas>=2.0
+openpyxl>=3.1
+# No other dependency: the optional real enrichment uses Python's built-in
+# urllib, so the demo runs offline with nothing but the packages above.

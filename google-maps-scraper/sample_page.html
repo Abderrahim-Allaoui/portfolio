@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Google Maps – sample saved search results page (demo fixture)</title>
+<!--
+  ============================================================================
+  DEMO FIXTURE — NOT a real Google page.
+
+  This is a hand-built, offline HTML file that mimics the DOM structure of a
+  Google Maps search-results page (same class names: Nv2PK, qBF1Pd, W4Efsd,
+  hfpxzc ...). It lets `scraper_dom.py --html sample_page.html` and
+  `scraper_playwright.py --self-test` run 100% offline, with no browser and
+  no network, so you can demo the extraction pipeline anywhere.
+
+  Google changes its markup regularly: if the scraper stops matching the real
+  site, update the selectors in listing_parser.py (they are all listed there).
+  ============================================================================
+-->
+</head>
+<body>
+<div id="deprecatedMap" role="feed" aria-label="Search results" aria-busy="false">
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Le Jasmin Restaurant - Restaurant in Casablanca" href="https://www.google.com/maps/place/Le+Jasmin+Restaurant/data=!4m7!3m6!1s0x12fcc5c9a1b11111!8m2!3d33.5883!4d-7.6114!16s%2Fg%2F11c0000000"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Le Jasmin Restaurant</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Restaurant</span></div>
+        <div class="W4Efsd"><span>4,5 ★</span><span class="UY7F9">(312)</span><span class="LrzXr">Rue Jean Jaurès, Maârif, Casablanca</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 23:00</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 522 27 45 12</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.lejasmin-casa.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Dar Zellij Restaurant - Moroccan restaurant in Marrakech" href="https://www.google.com/maps/place/Dar+Zellij+Restaurant/data=!4m7!3m6!1s0x12fcc5c9a2b22222!8m2!3d31.6295!4d-7.9811!16s%2Fg%2F11c0000001"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Dar Zellij Restaurant</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Moroccan restaurant</span></div>
+        <div class="W4Efsd"><span>4,7 ★</span><span class="UY7F9">(1 204)</span><span class="LrzXr">Derb Jdid, Guéliz, Marrakech</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 22:30</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 524 43 88 90</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.darzellij-marrakech.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Le Petit Chef Corniche - Seafood restaurant in Casablanca" href="https://www.google.com/maps/place/Le+Petit+Chef+Corniche/data=!4m7!3m6!1s0x12fcc5c9a3b33333!8m2!3d33.5472!4d-7.6746!16s%2Fg%2F11c0000002"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Le Petit Chef Corniche</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Seafood restaurant</span></div>
+        <div class="W4Efsd"><span>4,3 ★</span><span class="UY7F9">(546)</span><span class="LrzXr">Boulevard de la Corniche, Aïn Diab, Casablanca</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 00:00</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 522 36 71 05</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.petitchef-corniche.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="La Table de Rabat - French restaurant in Rabat" href="https://www.google.com/maps/place/La+Table+de+Rabat/data=!4m7!3m6!1s0x12fcc5c9a4b44444!8m2!3d34.0209!4d-6.8416!16s%2Fg%2F11c0000003"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">La Table de Rabat</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">French restaurant</span></div>
+        <div class="W4Efsd"><span>4,6 ★</span><span class="UY7F9">(289)</span><span class="LrzXr">Avenue Fal Ould Oumeir, Agdal, Rabat</span></div>
+        <div class="W4Efsd"><span>Closed ⋅ Opens 12:00</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 537 75 41 20</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.latable-rabat.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Palmeraie Dining - Restaurant in Marrakech" href="https://www.google.com/maps/place/Palmeraie+Dining/data=!4m7!3m6!1s0x12fcc5c9a5b55555!8m2!3d31.6544!4d-8.0126!16s%2Fg%2F11c0000004"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Palmeraie Dining</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Restaurant</span></div>
+        <div class="W4Efsd"><span>4,4 ★</span><span class="UY7F9">(431)</span><span class="LrzXr">Route de Fès, Palmeraie, Marrakech</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 23:30</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 524 30 66 12</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.palmeraiedining.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Atlas Immobilier SARL - Real estate agency in Rabat" href="https://www.google.com/maps/place/Atlas+Immobilier+SARL/data=!4m7!3m6!1s0x12fcc5c9a6b66666!8m2!3d34.0156!4d-6.8317!16s%2Fg%2F11c0000005"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Atlas Immobilier SARL</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Real estate agency</span></div>
+        <div class="W4Efsd"><span>4,2 ★</span><span class="UY7F9">(87)</span><span class="LrzXr">Avenue Hassan II, Agdal, Rabat</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 18:30</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 537 70 12 34</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.atlasimmobilier-rabat.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Casa Habitat Immo - Real estate agency in Casablanca" href="https://www.google.com/maps/place/Casa+Habitat+Immo/data=!4m7!3m6!1s0x12fcc5c9a7b77777!8m2!3d33.5817!4d-7.6311!16s%2Fg%2F11c0000006"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Casa Habitat Immo</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Real estate agency</span></div>
+        <div class="W4Efsd"><span>4,6 ★</span><span class="UY7F9">(152)</span><span class="LrzXr">Boulevard d'Anfa, Bourgogne, Casablanca</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 19:00</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 522 94 55 66</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.casahabitat-immo.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Riad Real Estate Marrakech - Real estate agency in Marrakech" href="https://www.google.com/maps/place/Riad+Real+Estate+Marrakech/data=!4m7!3m6!1s0x12fcc5c9a8b88888!8m2!3d31.6335!4d-7.9864!16s%2Fg%2F11c0000007"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Riad Real Estate Marrakech</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Real estate agency</span></div>
+        <div class="W4Efsd"><span>4,1 ★</span><span class="UY7F9">(64)</span><span class="LrzXr">Rue de la Liberté, Guéliz, Marrakech</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 18:00</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 524 33 21 09</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.riadrealestate.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Rif Properties Agence - Real estate agency in Rabat" href="https://www.google.com/maps/place/Rif+Properties+Agence/data=!4m7!3m6!1s0x12fcc5c9a9b99999!8m2!3d34.0091!4d-6.8493!16s%2Fg%2F11c0000008"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Rif Properties Agence</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Real estate agency</span></div>
+        <div class="W4Efsd"><span>4,4 ★</span><span class="UY7F9">(118)</span><span class="LrzXr">Avenue de France, Hay Riad, Rabat</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 18:30</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 537 74 88 21</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.rifproperties.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Médina &amp; Co Immobilier - Real estate agency in Casablanca" href="https://www.google.com/maps/place/Medina+and+Co+Immobilier/data=!4m7!3m6!1s0x12fcc5c9aabaaaaa!8m2!3d33.5950!4d-7.6180!16s%2Fg%2F11c0000009"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Médina &amp; Co Immobilier</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Real estate agency</span></div>
+        <div class="W4Efsd"><span>4,0 ★</span><span class="UY7F9">(45)</span><span class="LrzXr">Rue Riad Zitoun Kdim, Médina, Casablanca</span></div>
+        <div class="W4Efsd"><span>Closed ⋅ Opens 09:00</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 522 20 77 43</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.medina-immo.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+  <!-- A duplicate entry, on purpose: proves that the de-duplication step works. -->
+  <div class="Nv2PK tHAzX d6pvcl">
+    <a class="hfpxzc" aria-label="Le Jasmin Restaurant - Restaurant in Casablanca" href="https://www.google.com/maps/place/Le+Jasmin+Restaurant/data=!4m7!3m6!1s0x12fcc5c9a1b11111!8m2!3d33.5883!4d-7.6114!16s%2Fg%2F11c0000000"></a>
+    <div class="V8lN0e"><div class="qBF1Pd">Le Jasmin Restaurant</div></div>
+    <div class="UaQhfb">
+      <div class="rllt__details">
+        <div class="W4Efsd"><span class="DkEaL">Restaurant</span></div>
+        <div class="W4Efsd"><span>4,5 ★</span><span class="UY7F9">(312)</span><span class="LrzXr">Rue Jean Jaurès, Maârif, Casablanca</span></div>
+        <div class="W4Efsd"><span>Open ⋅ Closes 23:00</span></div>
+        <div class="W4Efsd"><span class="LrzXr">+212 522 27 45 12</span></div>
+      </div>
+    </div>
+    <a class="YhfJ6e" href="https://www.lejasmin-casa.ma" target="_blank" rel="nofollow">Website</a>
+  </div>
+
+</div>
+</body>
+</html>

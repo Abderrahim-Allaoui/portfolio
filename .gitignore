@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Excel temp locks (Excel creates these while files are open)
+~$*.xlsx
+
+# Large / generated outputs that should not be committed
+# (demo_output/ IS committed on purpose - it is the portfolio piece)
+*.log
