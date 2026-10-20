@@ -1,0 +1,98 @@
+{
+  "titleAfterPrefix": "build verified B2B lead lists for Morocco, MENA and Africa",
+  "fullTitle": "I will build verified B2B lead lists for Morocco, MENA and Africa",
+  "category": "Data",
+  "subcategoryQuery": "lead",
+  "subcategory": [
+    "Data Scraping",
+    "Lead Generation",
+    "Data Cleaning"
+  ],
+  "tags": [
+    "b2b leads",
+    "lead generation",
+    "morocco leads",
+    "arabic leads",
+    "email list"
+  ],
+  "description": "Need a targeted list of decision-makers in Morocco, the Gulf or Francophone Africa — with emails that actually reach them?\n\nI build verified B2B lead lists you can upload straight into Instantly, Apollo or Lemlist. Every row is researched and checked, not scraped blind.\n\nWHAT YOU GET PER LEAD\nCompany name · website · contact name · job title · verified email · LinkedIn · city · country · phone (when available) · source URL\n\nWHY MY LISTS DIFFER\nMost cheap lists are bulk-scraped and half the emails bounce. I verify every address (SMTP/MX check), remove catch-all domains, and dedupe — so your bounce rate stays under 3%.\n\nLANGUAGES & COVERAGE\nI work from Morocco and research in Arabic, French and English, so I cover Morocco, the Maghreb, the Gulf and West Africa properly — including companies that only list contact info in Arabic or French.\n\nSectors I source: real estate, logistics, import/export, clinics, agencies, restaurants, e-commerce and more.\n\nHOW TO ORDER\nMessage me first with your niche, country and how many leads you need. I will send a FREE sample of 5 leads so you can check the quality before paying anything.\n\nEnglish · Français · العربية",
+  "faq": [
+    [
+      "Do you verify the emails?",
+      "Yes — every address gets an SMTP/MX check. Catch-all domains are quarantined. Target bounce rate under 3%."
+    ],
+    [
+      "Can you reach companies that only list info in Arabic?",
+      "Yes. I research in Arabic, French and English from Morocco, so I cover local directories and sites most freelancers miss."
+    ],
+    [
+      "What if some emails bounce?",
+      "Message me and I will replace bounced rows for free within 7 days."
+    ],
+    [
+      "Do you send a sample first?",
+      "Yes — message me your criteria and I will send 5 free leads so you can judge the quality before ordering."
+    ]
+  ],
+  "packages": [
+    {
+      "name": "Test Batch",
+      "price": "40",
+      "delivery": [
+        "2 days delivery"
+      ],
+      "revisions": "1",
+      "desc": "50 verified leads, 1 sector. Email check. Excel file. 1 revision."
+    },
+    {
+      "name": "Growth",
+      "price": "150",
+      "delivery": [
+        "4 days delivery"
+      ],
+      "revisions": "2",
+      "desc": "300 verified leads, 2-3 sectors. SMTP + dedupe. Title + LinkedIn. CSV+Excel."
+    },
+    {
+      "name": "Full Campaign",
+      "price": "400",
+      "delivery": [
+        "7 days delivery"
+      ],
+      "revisions": "Unlimited",
+      "desc": "1,000 verified leads, any sector. Full enrichment + source URL. Tool-ready CSV."
+    }
+  ],
+  "requirements": [
+    [
+      "Which country and sector do you need?",
+      "e.g. Morocco, logistics companies. The more specific you are, the better the list."
+    ],
+    [
+      "How many leads do you need?",
+      "And what format do you want: Excel, CSV, or ready for Instantly / Apollo / Lemlist?"
+    ],
+    [
+      "Is there a company size or job title filter?",
+      "e.g. only owners, or only DSI / sales directors, min 10 employees."
+    ]
+  ],
+  "images": [
+    "thumbnails/output/thumbnail-1-leadgen.png",
+    "thumbnails/output/portfolio-1-maps-scraper.png",
+    "thumbnails/output/portfolio-1-output.png",
+    "thumbnails/output/portfolio-1-code.png"
+  ],
+  "technology": [
+    "Python",
+    "Scrapy",
+    "Selenium",
+    "Beautiful soup",
+    "Excel"
+  ],
+  "infoType": [
+    "Lead generation",
+    "Contact information"
+  ],
+  "technique": "AUTOMATED"
+}

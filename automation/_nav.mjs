@@ -1,0 +1,10 @@
+﻿import { Tab, fiverrTab, listTargets } from "./cdp.mjs";
+const targets = await listTargets();
+console.log("fiverr targets:");
+for (const t of targets.filter(x => x.url.includes("fiverr"))) console.log("  ", t.id, "|", t.title.slice(0,40), "|", t.url.slice(0,80));
+const tab = await fiverrTab("https://www.fiverr.com/users/allaouiabder/manage_gigs/new?wizard=0&tab=general", "manage_gigs");
+console.log("picked:", tab.info.url);
+console.log("now   :", await tab.eval(() => location.href));
+console.log("title :", await tab.eval(() => document.title));
+console.log("has title textarea:", await tab.eval(() => !!document.querySelector("textarea[maxlength='80']")));
+process.exit(0);
