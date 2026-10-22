@@ -1,4 +1,4 @@
-﻿// cdp.mjs — minimal Chrome DevTools Protocol driver (Node 24, no deps)
+// cdp.mjs — minimal Chrome DevTools Protocol driver (Node 24, no deps)
 import { writeFileSync } from "node:fs";
 
 const PORT = process.env.CDP_PORT || "9444";
@@ -420,5 +420,60 @@ export class Tab {
       await new Promise(r => setTimeout(r, 90));
     }
     return this.eval((s) => document.querySelector(s)?.value, selector);
+  }
+
+  // clear a field (react-aware) then type real characters + optional Enter
+  async typeInto(matcher, text, pressEnter = true) {
+    const sel = await this.eval((m) => {
+      const els = [...document.querySelectorAll("input")].filter(e => e.getClientRects().length);
+      const el = els.find(e => new RegExp(m, "i").test(e.placeholder || e.getAttribute("aria-label") || ""));
+      if (!el) return null;
+      el.setAttribute("data-ti", "1");
+      el.scrollIntoView({ block: "center" });
+      el.focus();
+      el.click();
+      const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set;
+      set.call(el, "");
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+      return "ok";
+    }, matcher);
+    if (!sel) return "input not found: " + matcher;
+    await new Promise(r => setTimeout(r, 350));
+    await this.send("Input.insertText", { text });
+    await new Promise(r => setTimeout(r, 800));
+    if (pressEnter) {
+      // react-select shows a filtered dropdown -> click its first option
+      // (pressing Enter alone does not commit the chip)
+      // find the filtered option, scroll, WAIT, then real-mouse click it
+      await this.eval((want) => {
+        const leaves = [...document.querySelectorAll("div,span,li,a,button")]
+          .filter(e => !e.children.length && e.getClientRects().length)
+          .filter(e => (e.textContent || "").trim() === want);
+        const el = leaves[leaves.length - 1];
+        if (el) el.scrollIntoView({ block: "center" });
+      }, text);
+      await new Promise(r => setTimeout(r, 500));
+      const rect = await this.eval((want) => {
+        const leaves = [...document.querySelectorAll("div,span,li,a,button")]
+          .filter(e => !e.children.length && e.getClientRects().length)
+          .filter(e => (e.textContent || "").trim() === want);
+        const el = leaves[leaves.length - 1];
+        if (!el) return null;
+        const r = el.getBoundingClientRect();
+        return { x: r.x + r.width / 2, y: r.y + r.height / 2 };
+      }, text);
+      let picked = "no option";
+      if (rect) {
+        await this.send("Input.dispatchMouseEvent", { type: "mouseMoved", x: rect.x, y: rect.y });
+        await this.send("Input.dispatchMouseEvent", { type: "mousePressed", x: rect.x, y: rect.y, button: "left", clickCount: 1 });
+        await this.send("Input.dispatchMouseEvent", { type: "mouseReleased", x: rect.x, y: rect.y, button: "left", clickCount: 1 });
+        picked = "real-clicked option: " + text;
+      }
+      if (picked !== "no option") { await new Promise(r => setTimeout(r, 700)); return "typed+selected " + text + " (" + picked + ")"; }
+      await this.send("Input.dispatchKeyEvent", { type: "rawKeyDown", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13 });
+      await this.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13 });
+      await new Promise(r => setTimeout(r, 700));
+    }
+    return "typed " + text;
   }
 }

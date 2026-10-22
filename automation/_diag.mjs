@@ -1,0 +1,11 @@
+﻿import { Tab, fiverrTab } from "./cdp.mjs";
+const tab = await fiverrTab();
+console.log("picked:", tab.info.url);
+await tab.goto("https://www.fiverr.com/users/allaouiabder/portfolio/new");
+await new Promise(r => setTimeout(r, 4000));
+console.log("after goto url:", (await tab.eval(() => location.href)));
+console.log("title:", (await tab.eval(() => document.title)));
+const t = await tab.eval(() => document.body.innerText.slice(0, 400));
+console.log("body:", t);
+console.log("forms:", await tab.eval(() => [...document.querySelectorAll("form")].map(f => f.name || f.id || f.className.toString().slice(0,30))));
+process.exit(0);

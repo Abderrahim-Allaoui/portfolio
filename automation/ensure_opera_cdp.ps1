@@ -36,7 +36,7 @@ Get-Process opera | Stop-Process -Force
 Start-Sleep -Seconds 4
 Get-Process opera | Stop-Process -Force
 Start-Sleep -Seconds 2
-Start-Process $exe -ArgumentList "--remote-debugging-port=$PORT","--remote-allow-origins=*","--disable-gpu","--restore-last-session",$prof
+Start-Process $exe -ArgumentList "--remote-debugging-port=$PORT","--remote-allow-origins=*","--disable-gpu","--no-first-run","--no-default-browser-check","--disable-session-crashed-bubble"
 
 for ($i = 0; $i -lt 25; $i++) {
     Start-Sleep -Seconds 2
